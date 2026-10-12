@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b2a4a">
+<title>CNG Deal Desk — Illustrative Demo</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">ILLUSTRATIVE — NOT A LIVE TRANSACTION</div>
+
+<main class="stage">
+  <div class="phone" id="phone">
+    <div class="notch"></div>
+    <div class="screen" id="screen"><!-- screens injected by app.js --></div>
+    <div class="home-bar"></div>
+  </div>
+
+  <aside class="side">
+    <div class="step-label" id="stepLabel">Screen 1 of 5</div>
+    <div class="say" id="say"></div>
+    <div class="controls">
+      <button id="prev" aria-label="Previous screen">← Back</button>
+      <div class="dots" id="dots"></div>
+      <button id="next" class="primary" aria-label="Next screen">Next →</button>
+    </div>
+    <div class="tools">
+      <button id="toggleSay">Hide script</button>
+      <button id="toggleApp">Full-screen app view</button>
+      <button id="toggleArc">90-second arc</button>
+      <button id="toggleCtl">Control lines</button>
+    </div>
+    <div class="panel" id="arcPanel" hidden>
+      <h3>Spoken arc (≈90 sec)</h3>
+      <ol>
+        <li>“Illustrative path only — not a live deal.”</li>
+        <li>Screen 1 — requirement in; fee separate from maize price.</li>
+        <li>Screen 2 — supply REPORTED, not verified.</li>
+        <li>Screen 3 — blocker visible; photo ≠ verification.</li>
+        <li>Screen 4 — authorised approval only; no auto-paid.</li>
+        <li>Screen 5 — fee 25k / 30k / min 25k; contribution example; no client funds held.</li>
+      </ol>
+      <h3>If asked “is this real?”</h3>
+      <p>“Illustrative. Real match needs fee decision + verified supply.”</p>
+    </div>
+    <div class="panel" id="ctlPanel" hidden>
+      <h3>Control lines (if challenged)</h3>
+      <ul>
+        <li>No live Amuru batch claimed</li>
+        <li>No bank/escrow live</li>
+        <li>No fee collected</li>
+        <li>REPORTED ≠ VERIFIED</li>
+        <li>Commodity ≠ CNG income</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
